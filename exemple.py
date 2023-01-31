@@ -5,7 +5,8 @@ class Point:
     def __init__(self, a, b):
         self.x = a
         self.y = b
-
+    def __del__(self):
+        print('Удаление экземпляра: ' + str(self))
     def set_coords(self, x, y):
         self.x = x
         self.y = y
@@ -13,7 +14,7 @@ class Point:
     def get_coords(self):
         return self.x, self.y
 
-pt = Point(1, 2)
+pt = Point(1, 2 )
 print(pt.__dict__)
 
 class Car:
